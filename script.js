@@ -29,3 +29,17 @@ document.getElementById('key').addEventListener('click',function (event) {
     typedNumbers.value=newTypedNumbers;
     }
 })
+
+function varifyPin() {
+    const pin=document.getElementById('display-pin').value;
+    const typedNumbers=document.getElementById('typed-numbers').value;
+    if (pin==typedNumbers) {
+        document.getElementById('success').style.display='block'
+        document.getElementById('fail').style.display='none'
+        
+    } else {
+        document.getElementById('fail').style.display='block'
+        document.getElementById('success').style.display='none'
+    }
+
+}
